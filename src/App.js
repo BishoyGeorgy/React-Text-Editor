@@ -28,11 +28,6 @@ class App extends Component {
           <TextAreaCompnent />
           <ResultComponent hidden={this.state.hidden} />
         </div>
-        {/* <input
-          placeholder="location"
-          value={this.state.location}
-          onChange={(e) => this.setState({ location: e.target.value })}
-        ></input> */}
       </React.Fragment>
     );
   }
