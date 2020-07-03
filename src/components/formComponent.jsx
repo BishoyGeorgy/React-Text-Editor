@@ -3,8 +3,8 @@ import SelectComponent from "./selectComponent";
 import InputComponent from "./InputComponent";
 
 class FormComponent extends Component {
-  state = {};
   render() {
+    const { onChange, components } = this.props;
     const fontTypes = [
       {
         key: "RobotoSlab",
@@ -36,7 +36,7 @@ class FormComponent extends Component {
     ];
     return (
       <React.Fragment>
-        <form className="ml-5 mr-5 mb-5">
+        <form className="ml-5 mr-5 mb-5" onChange={onChange}>
           <div class="form-row ml-5 mr-5 subheading">
             <SelectComponent
               width="6"
@@ -52,15 +52,10 @@ class FormComponent extends Component {
             />
           </div>
           <div class="form-row ml-5 mr-4 subheading">
-            <InputComponent
-              width="4"
-              label="Font Size"
-              key="fontSize"
-              type="number"
-              unit="pt"
-              placeholder="12"
-            />
-            <InputComponent
+            {components.map((c) => (
+              <InputComponent component={c} />
+            ))}
+            {/* <InputComponent
               width="4"
               label="Vertical Position of Text"
               key="verticalPosition"
@@ -75,9 +70,9 @@ class FormComponent extends Component {
               type="number"
               unit="px"
               placeholder="3"
-            />
+            /> */}
           </div>
-          <div class="form-row ml-5 mr-4 subheading">
+          {/* <div class="form-row ml-5 mr-4 subheading">
             <InputComponent
               width="3"
               label="Letter Spacing"
@@ -104,7 +99,7 @@ class FormComponent extends Component {
               key="paperCurvature"
               type="checkbox"
             />
-          </div>
+          </div> */}
         </form>
         <div class="form-row ml-5 mr-4 subheading">
           <button
