@@ -1,13 +1,51 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Titillium Web",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.heading {
+  font-weight: 700;
+  font-family: RobotoSlab;
+  font-size: 30px;
+}
+
+.subheading {
+  font-weight: bold;
+  font-family: Oswald;
+}
+
+@font-face {
+  font-family: "Yellowtail";
+  src: local("Yellowtail"),
+    url(./fonts/Yellowtail-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: local("RobotoSlab"),
+    url(./fonts/RobotoSlab-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald"),
+    url(./fonts/Oswald-VariableFont_wght.ttf) format("truetype");
+}
+
+/* input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+} */
