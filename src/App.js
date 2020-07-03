@@ -5,9 +5,16 @@ import Header from "./components/header";
 import Setting from "./components/setting";
 import "bootstrap/dist/css/bootstrap.css";
 import FormComponent from "./components/formComponent";
+import TextAreaCompnent from "./components/TextAreaComponent";
+import ResultComponent from "./components/ResultComponent";
 
 class App extends Component {
-  state = { location: "ads" };
+  state = { location: "ads", hidden: "hidden" };
+
+  showImage = () => {
+    this.setState({ hidden: "" });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -16,7 +23,11 @@ class App extends Component {
         </h1>
 
         <Header></Header>
-        <FormComponent></FormComponent>
+        <FormComponent handleOnClick={this.showImage} />
+        <div className="row">
+          <TextAreaCompnent />
+          <ResultComponent hidden={this.state.hidden} />
+        </div>
         {/* <input
           placeholder="location"
           value={this.state.location}
