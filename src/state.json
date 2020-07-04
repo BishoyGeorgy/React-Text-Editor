@@ -1,0 +1,80 @@
+{
+  "selectComponents": [
+    {
+      "width": "6",
+      "label": "Handwriting Font",
+      "key": "fontType",
+      "value": "Roboto Slab",
+      "options": [
+        {
+          "key": "RobotoSlab",
+          "selected": true,
+          "name": "Roboto Slab"
+        },
+        {
+          "key": "Oswald",
+          "selected": false,
+          "name": "Oswald"
+        },
+        {
+          "key": "Yellowtail",
+          "selected": false,
+          "name": "Yellow tail"
+        }
+      ]
+    },
+    {
+      "width": "6",
+      "label": "Pen Ink Color",
+      "key": "fontColor",
+      "value": "blue",
+      "options": [
+        {
+          "key": "blue",
+          "selected": true,
+          "name": "Blue"
+        },
+        {
+          "key": "black",
+          "selected": false,
+          "name": "Black"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "width": "4",
+      "label": "Font Size",
+      "key": "fontSize",
+      "type": "number",
+      "unit": "pt",
+      "value": 12
+    },
+    {
+      "width": "4",
+      "label": "Vertical Position of Text",
+      "key": "verticalPosition",
+      "type": "number",
+      "unit": "px",
+      "value": 0
+    },
+    {
+      "width": "4",
+      "label": "Word Spacing",
+      "key": "wordSpacing",
+      "type": "number",
+      "unit": "px",
+      "value": 0
+    },
+    {
+      "width": "4",
+      "label": "Letter Spacing",
+      "key": "letterSpacing",
+      "type": "number",
+      "unit": "pt",
+      "value": 3
+    }
+  ],
+  "hidden": "hidden"
+}

@@ -2,16 +2,7 @@ import React, { Component } from "react";
 
 class InputComponent extends Component {
   render() {
-    const {
-      width,
-      label,
-      type,
-      unit,
-      placeholder,
-      value,
-      onChange,
-      component,
-    } = this.props;
+    const { onChange, component } = this.props;
     return (
       <div className={"form-group col-md-" + component.width}>
         <label for={this.key}>{component.label}</label>
@@ -26,7 +17,7 @@ class InputComponent extends Component {
             value={component.value}
             onChange={onChange}
           />
-          <span class="w-3 mr-4 input-group-text">{unit}</span>
+          <span class="w-3 mr-4 input-group-text">{component.unit}</span>
         </div>
       </div>
     );

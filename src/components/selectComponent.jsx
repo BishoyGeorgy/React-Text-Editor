@@ -2,12 +2,17 @@ import React, { Component } from "react";
 
 class SelectComponent extends Component {
   render() {
-    const { width, label, options } = this.props;
+    const { component, width, label, onChange } = this.props;
     return (
-      <div class={"form-group col-md-" + width}>
-        <label for={this.key}>{label}</label>
-        <select class="custom-select" name={this.key}>
-          {options.map((option) => (
+      <div class={"form-group col-md-" + component.width}>
+        <label for={component.key}>{component.label}</label>
+        <select
+          class="custom-select"
+          name={component.key}
+          id={component.key}
+          onChange={onChange}
+        >
+          {component.options.map((option) => (
             <option
               value={option.key}
               key={option.key}

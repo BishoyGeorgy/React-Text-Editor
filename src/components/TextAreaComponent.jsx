@@ -11,9 +11,15 @@ class TextAreaCompnent extends Component {
       letterSpacing,
     } = this.props;
 
-    console.log(this.props);
     return (
-      <div className="ml-5 mt-4 col-5">
+      <div
+        className="ml-5 mt-4 col-5"
+        // style={{
+        //   border: "1px solid rgb(204, 204, 204)",
+        //   background:
+        //     "linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))",
+        // }}
+      >
         <label className="ml-4" for="Textarea1">
           Type/Paste text here
         </label>
@@ -22,7 +28,7 @@ class TextAreaCompnent extends Component {
             fontFamily: fontFamily,
             fontSize: fontSize,
             color: color,
-            padding: padding,
+            paddingTop: padding,
             wordSpacing: wordSpacing,
             letterSpacing: letterSpacing,
           }}
